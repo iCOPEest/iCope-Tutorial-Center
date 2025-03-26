@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCOPE Tutorial Center</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('website background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            color: #fff;
+            margin: 0;
+            padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: auto; 
+        }
+        header {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center; 
+            margin-bottom: 20px; 
+        }
+        img {
+            max-width: 300px;
+            position: absolute;
+            top: 20px; 
+            left: 20px; 
+        }
+        .title-container {
+            text-align: center;
+            margin-top: 80px; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 5em;
+            color: #f1e755;
+            text-shadow: 10px 10px 10px rgba(1, 1, 1, 1.8);
+        }
+        .introduction {
+            max-width: 800px; 
+            text-align: center;
+            margin-bottom: 20px; 
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.6); 
+            border-radius: 10px; 
+        }
+        .button-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px; 
+        }
+        .button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #333;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .button:active {
+            transform: scale(0.95);
+        }
+        section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            display: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-height: none; 
+            overflow-y: auto; 
+        }
+        section h2 {
+            font-size: 2.5em;
+            color: #f5f84b;
+            margin-bottom: 15px;
+        }
+        section h3 {
+            font-size: 1.8em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #ffffff;
+        }
+
+        .comment-section {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .comment-section h3 {
+            font-size: 2em;
+            color: #f5f84b;
+            margin-bottom: 10px;
+        }
+
+        .comment-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comment-section input[type="text"],
+        .comment-section textarea {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+        }
+
+        .comment-section input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f5f84b;
+            color: rgb(3, 2, 2);
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .comment-section input[type="submit"]:hover {
+            background-color: #decb0e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo 1.png" alt="iCOPE Logo">
+    <div class="title-container">
+        <h1>iCope Tutorial Center</h1>
+    </div>
+</header>
+
+<div class="introduction">
+    <h2>WELCOME!!</h2>
+    <p>At iCope, we are dedicated to providing exceptional educational support that caters to students of all ages and academic levels. Our expert tutors utilize innovative teaching methods to enhance learning and foster a love for education. Join us in unlocking your potential!</p>
+</div>
+
+<div class="button-container">
+    <button class="button" onclick="toggleSection('about')">About Us</button>
+    <button class="button" onclick="toggleSection('quality')">Quality</button>
+    <button class="button" onclick="toggleSection('services')">Services</button>
+    <button class="button" onclick="toggleSection('contact')">Contact</button>
+</div>
+
+<section id="home" style="display: none;">
+    <h2>Home</h2>
+    <p>Welcome to the iCOPE Learning System, where education meets innovation. Explore our resources and discover new ways to enhance your learning experience!</p>
+</section>
+
+<section id="about" style="display: none;">
+    <h2>About Us</h2>
+    <p>Welcome to iCOPE! Our journey began with a simple dream. I was once a teacher who started with little more than passion and determination. Teaching is never easy, it demands patience, dedication, and a genuine interest in helping others. You can't please everyone, but over time, I became one of the most awarded teachers in my field.</p>
+    <p>There were times when I doubted myself, when I questioned whether I was good enough or if teaching was the right profession for me. I considered leaving it all behind and returning to my original career as a customer service representative. And for a while, I did step away. But the calling to teach was always there, reminding me of the impact I could have.</p>
+    <p>One day, I decided to return to teaching, with the help and encouragement of my sister. I joined a company as a teacher and, to my surprise, I was able to attract students from all levels, beginners to advanced learners. Through hard work and dedication, one of my students, who later became a close friend, suggested that I open my own center. At first, I thought it was impossible. But as more people encouraged me, the idea began to feel real.</p>
+    <p>Eventually, I took the leap and decided to become a freelance teacher, and in time, I realized the dream of opening this center. Today, we are a thriving company, and it's thanks to the many students who trusted me and stayed with me throughout my journey. Their support, kind words, and valuable feedback have been the driving force behind our success.</p>
+    <p>At iCOPE, we are committed to helping people from all walks of life, regardless of age, nationality, or background, pursue their learning goals. Our passion for teaching remains as strong as when I first started, and we are here to continue sharing that passion with the world.</p>
+    <P>Everyone has the right and freedom to learn, and it is our privilege to support that journey.</P>
+    <p>Join us as we delve into tailored learning experiences designed to help you achieve your ultimate potential!</p>
+</section>
+
+<section id="quality" style="display: none;">
+    <h2>Quality</h2>
+    <h3>Experienced Tutors</h3>
+    <p>At iCope Tutorial Center, our team consists of experienced tutors who are passionate about education and dedicated to fostering a positive learning environment. Each tutor brings a wealth of knowledge and expertise in their subject areas, ensuring that students receive top-notch instruction tailored to their individual needs. Our tutors employ diverse teaching strategies to engage students, making complex concepts more accessible and enjoyable. With their guidance, students can build confidence, develop critical thinking skills, and achieve ultimate academic success. Whether it's one-on-one sessions or group classes, our tutors are committed to empowering every learner on their educational journey.</p>
+
+    <h3>Customized Learning</h3>
+    <p>At iCope Tutorial Center, we prioritize customized learning to meet the unique needs of each student. Our approach begins with an in-depth assessment to identify individual strengths and areas for improvement. Based on this evaluation, we design personalized learning plans that cater to different learning styles and paces. This tailored approach not only enhances understanding but also fosters a love for learning. By focusing on specific goals and adapting our methods, we ensure that every student receives the ultimate support to thrive academically and reach their full potential.</p>
+
+    <h3>Supportive Environment</h3>
+    <p>At iCope Tutorial Center, we cultivate a supportive environment that encourages growth, confidence, and open communication. Our atmosphere is warm and welcoming, allowing students to feel comfortable expressing their questions and concerns. We believe that learning thrives when students feel safe and respected, so we foster strong relationships between tutors and learners. Our dedicated staff is always available to provide guidance, offer encouragement, and celebrate achievements, big and small. By creating a community where collaboration and positivity reign, we empower our students to take risks, overcome challenges, and fully engage in their educational journey.</p>
+
+    <h3>Flexible Scheduling</h3>
+    <p>iCope Tutorial Center offers flexible scheduling to accommodate the diverse needs of our students. Understanding that each learner has unique commitments, we provide a variety of options for sessions, including evenings and weekends. This adaptability allows students to choose times that work best for them, ensuring that their educational pursuits fit seamlessly into their busy lives. Whether you prefer one-time sessions or ongoing support, our goal is to make learning accessible and convenient, enabling students to focus on their academic growth without the stress of rigid schedules.</p>
+</section>
+
+<section id="services" style="display: none;">
+    <h2>Services</h2>
+    <p>At iCope Tutorial Center, we offer tailored English language learning services designed to meet the diverse needs of students across various age groups. Our two main options are:</p>
+    
+    <h3>1. One-on-One Tutoring</h3>
+    <p>Our personalized one-on-one tutoring sessions provide focused attention tailored to each student’s unique learning style and pace. This option is ideal for those who want:</p>
+    <ul>
+        <li><strong>Customized Learning Plans:</strong> Lessons are designed based on individual strengths and weaknesses.</li>
+        <li><strong>Flexible Scheduling:</strong> Students can arrange sessions at their convenience.</li>
+        <li><strong>Focused Attention:</strong> Tutors can address specific areas of difficulty, whether it’s reading comprehension, writing skills, or conversational English.</li>
+    </ul>
+
+    <h3>2. Group Classes</h3>
+    <p>Our group classes foster a collaborative learning environment where students can benefit from peer interaction. This option is perfect for:</p>
+    <ul>
+        <li><strong>Social Learning:</strong> Students engage with classmates, enhancing communication skills.</li>
+        <li><strong>Structured Curriculum:</strong> Classes follow a comprehensive syllabus that covers grammar, vocabulary, and practical usage.</li>
+        <li><strong>Variety of Activities:</strong> Lessons include group discussions, role-playing, and games, making learning enjoyable and effective.</li>
+    </ul>
+</section>
+
+<section id="contact" style="display: none;">
+    <h2>Contact</h2>
+    <p>Have questions? Reach out to us at:</p>
+    <li>Email: <a href="mailto:icopeest24@gmail.com" style="color: #decb0e;">icopeest24@gmail.com</a></li>
+    <li>Phone: <a href="tel:+639956655170" style="color: #decb0e;">09956655170</a></li>
+    <p>Our business hours are Monday to Friday, 6:00 AM to 12:00 AM. We’re here to assist you!</p>
+</section>
+
+<div class="comment-section">
+    <h3>Leave a Comment</h3>
+    <form action="/submit-comment" method="POST">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="comment">Your Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit Comment">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 iCOPE Tutorial Center</p>
+</footer>
+
+<script>
+    function toggleSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const isVisible = section.style.display === 'block';
+        const sections = document.querySelectorAll('section');
+        sections.forEach(s => s.style.display = 'none');
+        section.style.display = isVisible ? 'none' : 'block'; 
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        const commentSection = document.querySelector('.comment-section');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+
+            const newComment = document.createElement('p');
+            newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+            commentSection.appendChild(newComment);
+
+            form.reset();
+        });
+    });
+</script>
+
+</body>
+</html>
